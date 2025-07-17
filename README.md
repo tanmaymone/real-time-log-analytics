@@ -55,29 +55,33 @@ MongoDB	Stores real-time log data persistently for analysis.
 
 🚀 How to Run
 1. Clone the project
-git clone https://github.com/tanmaymone/real-time-log-analytics.git
-cd real-time-log-analytics
+          git clone https://github.com/tanmaymone/real-time-log-analytics.git
+          cd real-time-log-analytics
 2. Start Kafka, Zookeeper, and MongoDB via Docker Compose
-docker-compose up -d
+          docker-compose up -d
 3. Run the Producer App
-cd producer
-./mvnw spring-boot:run
+          cd producer
+          ./mvnw spring-boot:run
 4. Run the Consumer App
-cd consumer
-./mvnw spring-boot:run
+          cd consumer
+          ./mvnw spring-boot:run
+
 📝 Sample Log Sent
-{
-  "timestamp": "2025-07-17T12:00:00Z",
-  "level": "INFO",
-  "message": "User logged in successfully",
-  "source": "AuthService"
-}
+
+          {
+            "timestamp": "2025-07-17T12:00:00Z",
+            "level": "INFO",
+            "message": "User logged in successfully",
+            "source": "AuthService"
+          }
 📂 Folder Structure
-├── docker-compose.yml
-├── consumer
-│   └── com.kafka.consumer  # Spring Boot Kafka consumer (MongoDB persistence)
-├── producer
-│   └── com.kafka.producer  # Spring Boot Kafka log producer
+
+          ├── docker-compose.yml
+          ├── consumer
+          │   └── com.kafka.consumer  # Spring Boot Kafka consumer (MongoDB persistence)
+          ├── producer
+          │   └── com.kafka.producer  # Spring Boot Kafka log producer
+
 📌 Improvements You Can Add
 Expose REST API to fetch logs from MongoDB
 
