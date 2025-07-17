@@ -2,6 +2,7 @@
 A real-time data pipeline that captures log messages from a Spring Boot producer, sends them to a Kafka topic, and persists them in MongoDB via a Kafka consumer.
 
 🧱 Architecture
+
           +------------+         +------------+         +-------------+
           |  Producer  |  --->   |   Kafka    |  --->   |  Consumer   |
           | (Spring)   |         |  +Zookeeper|         | (Spring)    |
